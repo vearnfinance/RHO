@@ -14,10 +14,10 @@ contract('RhoToken', function ([ creator, other ]) {
 
   const NAME = 'RhoToken';
   const SYMBOL = 'RHO';
-  const TOTAL_SUPPLY = new BN('10000000000000000000000');
+  const TOTAL_SUPPLY = new BN('10000');
 
   beforeEach(async function () {
-    this.token = await RhoToken.new(NAME, SYMBOL, TOTAL_SUPPLY, { from: creator });
+    this.token = await RhoToken.new(NAME, SYMBOL, { from: creator });
   });
 
   it('retrieve returns a value previously stored', async function () {

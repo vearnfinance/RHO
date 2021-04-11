@@ -15,11 +15,11 @@ contract('RhoCrowdsale', function ([ creator, experimenter, wallet ]) {
 
   const NAME = 'RhoToken';
   const SYMBOL = 'RHO';
-  const TOTAL_SUPPLY = new BN('10000000000000000000000');
+  const TOTAL_SUPPLY = new BN('10000');
   const RATE = new BN(10);
 
   beforeEach(async function () {
-    this.token = await RhoToken.new(NAME, SYMBOL, TOTAL_SUPPLY, { from: creator });
+    this.token = await RhoToken.new(NAME, SYMBOL, { from: creator });
     this.crowdsale = await RhoCrowdsale.new(RATE, wallet, this.token.address);
     this.token.transfer(this.crowdsale.address, await this.token.totalSupply());
   });
