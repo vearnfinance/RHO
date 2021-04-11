@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  * @title RhoToken
  * All Rho Tokens are pre-assigned to the creator.
  * Creator can distribute Rho Tokens using `transfer` and other `ERC20` functions.
- 
+ */
 contract RhoToken is ERC20 {
     /**
      * Constructor that gives msg.sender all of existing tokens.
