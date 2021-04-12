@@ -14,7 +14,7 @@ contract('RhoToken', function ([ creator, other ]) {
 
   const NAME = 'RhoToken';
   const SYMBOL = 'RHO';
-  const TOTAL_SUPPLY = new BN('10000');
+  const TOTAL_SUPPLY = new BN('10000000000000000000000');
 
   beforeEach(async function () {
     this.token = await RhoToken.new(NAME, SYMBOL, { from: creator });

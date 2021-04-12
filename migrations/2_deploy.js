@@ -4,7 +4,7 @@ const RhoToken = artifacts.require("RhoToken");
 const RhoCrowdsale = artifacts.require("RhoCrowdsale");
 
 module.exports = async function (deployer, network, accounts) {
-  await deployer.deploy(RhoToken, 'Rho Token', 'RHO', '10000000000000000000000');
+  await deployer.deploy(RhoToken, 'Rho Token', 'RHO');
   const token = await RhoToken.deployed();
   
   await deployer.deploy(RhoCrowdsale, 1, accounts[0], token.address);

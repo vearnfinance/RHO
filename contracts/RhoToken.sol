@@ -17,7 +17,7 @@ contract RhoToken is ERC20Detailed, ERC20 {
     constructor(
         string memory name,
         string memory symbol
-    ) public ERC20Detailed(name, symbol, 0) ERC20() {
-        _mint(msg.sender, 10000);
+    ) public ERC20Detailed(name, symbol, 18) ERC20() {
+        _mint(msg.sender, 10000 * 1e18);
     }
 }

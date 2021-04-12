@@ -15,7 +15,6 @@ contract('RhoCrowdsale', function ([ creator, experimenter, wallet ]) {
 
   const NAME = 'RhoToken';
   const SYMBOL = 'RHO';
-  const TOTAL_SUPPLY = new BN('10000');
   const RATE = new BN(10);
 
   beforeEach(async function () {
@@ -36,6 +35,6 @@ contract('RhoCrowdsale', function ([ creator, experimenter, wallet ]) {
 
     await this.crowdsale.buyTokens(experimenter, { value: experimentAmount, from: experimenter });
 
-    expect(await this.token.balanceOf(experimeter)).to.be.bignumber.equal(expectedTokenAmount);
+    expect(await this.token.balanceOf(experimenter)).to.be.bignumber.equal(expectedTokenAmount);
   });
 });
