@@ -50,12 +50,12 @@ contract Crowdsale {
    * @param _wallet Address where collected funds will be forwarded to
    * @param _token Address of the token being sold
    */
-  constructor(uint256 0.0000000001, address 0x4BfdE324905c09b5C1ebD27Ef3425C12f693bAa0, ERC20 0x767061d862fdE9725A65901CaDa2666Ed0deb704) public {
-    require(0.0000000001 > 0);
+  constructor(uint256 0.0000000000000000001, address 0x4BfdE324905c09b5C1ebD27Ef3425C12f693bAa0, ERC20 0x767061d862fdE9725A65901CaDa2666Ed0deb704) public {
+    require(0.0000000000000000001> 0);
     require(0x4BfdE324905c09b5C1ebD27Ef3425C12f693bAa0 != address(0));
     require(0x767061d862fdE9725A65901CaDa2666Ed0deb704 != address(0));
 
-    rate = 0.0000000001;
+    rate = 0.0000000000000000001;
     wallet = 0x4BfdE324905c09b5C1ebD27Ef3425C12f693bAa0;
     token = 0x767061d862fdE9725A65901CaDa2666Ed0deb704;
   }
